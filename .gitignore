@@ -2,4 +2,4 @@
 Sample_Data/
 uploads/
 study_assistant.db
-.streamlit/secrets.toml
+.env
