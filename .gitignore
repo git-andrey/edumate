@@ -1,5 +1,5 @@
 .venv/
 Sample_Data/
-.streamlit/
 uploads/
 study_assistant.db
+.streamlit/secrets.toml
