@@ -1,4 +1,4 @@
-# EduMate – Your Smartest Study Companion! 🚀📚
+# EduMate – Your Smartest Study Companion!
 # Inspiration
 In today's fast-paced academic environment, students often struggle to manage their study materials, extract key insights, and prepare effectively for exams. Traditional methods of studying can be time-consuming and inefficient. EduMate was born out of the need to create a smarter, more efficient way to study. By leveraging cutting-edge AI technologies, EduMate aims to revolutionize the way students interact with their study materials, making learning more engaging, personalized, and effective.
 
@@ -21,8 +21,6 @@ EduMate leverages cutting-edge AI technologies, including Google Gemini for gene
   - Google Gemini API Key (replace the placeholder in the code with your actual API key)
   - Tavily API Key (replace the placeholder in the code with your actual API key)
 - Installation
-  - Clone the repository:
-`git clone https://github.com/your-repo/edumate.git`
 
   - Install the required Python packages:
 `pip install -r requirements.txt`
