@@ -6,6 +6,7 @@ from reportlab.lib.pagesizes import letter
 import google.generativeai as genai
 from reportlab.pdfgen import canvas
 from PyPDF2 import PdfReader
+from dotenv import load_dotenv
 import streamlit as st
 import numpy as np
 import sqlite3
@@ -14,19 +15,22 @@ import json
 import time
 import os
 
-# Set the Tavily API key
+# Load environment variables from .env file
+load_dotenv()
 
-os.environ["TAVILY_API_KEY"] = st.secrets["secrets"]["TAVILY_API_KEY"] # Use Streamlit secrets
+# Set the Tavily API key
+os.environ["TAVILY_API_KEY"] = st.secrets["secrets"]["TAVILY_API_KEY"]
+# os.environ["TAVILY_API_KEY"] = os.getenv("TAVILY_API_KEY")
+
 # Initialize Tavily search tool to retrieve top 3 results
 web_search_tool = TavilySearchResults(k=3)
 
 # Set Gemini API key
-
-
-genai.configure(api_key=st.secrets["secrets"]["GEMINI_API_KEY"])  # Use Streamlit secrets
+os.environ["GEMINI_API_KEY"] = st.secrets["secrets"]["GEMINI_API_KEY"]
+# os.environ["GEMINI_API_KEY"] = os.getenv("GEMINI_API_KEY")
 
 # Configure Gemini
-genai.configure(api_key=st.secrets["secrets"]["GEMINI_API_KEY"])
+genai.configure()
 generation_config = {
     "temperature": 0.7,
     "top_p": 0.95,
